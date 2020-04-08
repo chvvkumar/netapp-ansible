@@ -1,0 +1,9 @@
+---
+    - hosts: localhost
+      name: Clear nblade cache
+      gather_facts: false
+      vars_files:
+        vars.yaml     
+      roles: 
+        - clear-credential-cache
+      #remote_user: "{{ netapp_username }}"

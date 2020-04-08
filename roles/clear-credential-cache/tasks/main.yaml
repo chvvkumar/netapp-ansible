@@ -1,0 +1,11 @@
+---
+    - name: net int show test
+      na_ontap_command:
+        hostname: "{{ inventory_hostname }}"
+        username: "{{ netapp_username }}"
+        password: "{{ netapp_password }}"
+        https: true
+        validate_certs: false  
+        command: ['network', 'interface', 'show']
+        privilege: 'admin'
+        return_dict: true
